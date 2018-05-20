@@ -21,7 +21,19 @@ public class PruebaKolmogorovSmirnov {
         this.numerosAleatorios = numerosAleatorios;
     }
 
-    public void resolver() {
+    private double[] calcularDistanciaAcumulada() {
+        int n = this.numerosAleatorios.length;
+        double[] distanciasAcumuladas = new double[n];
 
+        for (int i = 0; i < this.numerosAleatorios.length; i++) {
+            distanciasAcumuladas[i] = (double) (i + 1) / n;
+            System.out.println(distanciasAcumuladas[i]);
+        }
+
+        return distanciasAcumuladas;
+    }
+
+    public void resolver() {
+        this.calcularDistanciaAcumulada();
     }
 }
